@@ -1,9 +1,9 @@
 :root {
     --bg-main: #FAF8F5;
-    --text-main: #1A1A1A;
-    --text-muted: #555555;
+    --text-main: #111111;
+    --text-muted: #666666;
     --accent-orange: #F97D50;
-    --neutral-surface: #F2ECE1;
+    --neutral-surface: #EFECE6;
     --border-subtle: rgba(0, 0, 0, 0.08);
     --font-sans: 'Plus Jakarta Sans', sans-serif;
     --font-body: 'Ruluko', sans-serif;
@@ -19,21 +19,111 @@ body {
     background-color: var(--bg-main);
     color: var(--text-main);
     font-family: var(--font-sans);
-    line-height: 1.7;
-    padding: 5rem 1.5rem;
+    line-height: 1.6;
+    padding: 4rem 2rem;
 }
 
-.portfolio-container {
-    max-width: 860px;
+.site-wrapper {
+    max-width: 1000px;
     margin: 0 auto;
 }
 
-.project-section {
-    padding: 1.5rem 0;
+/* Navegación y Cabeceras */
+.site-header {
+    margin-bottom: 5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    border-bottom: 1px solid var(--border-subtle);
+    padding-bottom: 1.5rem;
+}
+
+.site-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+}
+
+.site-title a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.back-link {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--text-muted);
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.back-link:hover {
+    color: var(--accent-orange);
+}
+
+/* Home / Índice de Proyectos (Estilo Tilted Chair) */
+.hero-intro {
+    font-size: 2.2rem;
+    font-weight: 600;
+    line-height: 1.3;
+    margin-bottom: 4rem;
+    max-width: 800px;
+    letter-spacing: -0.02em;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2.5rem;
+}
+
+.project-card {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    group: true;
+}
+
+.project-thumb {
+    background-color: var(--neutral-surface);
+    height: 380px;
+    border-radius: 12px;
+    margin-bottom: 1.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    border: 1px solid var(--border-subtle);
+}
+
+.project-card:hover .project-thumb {
+    transform: translateY(-4px);
+    background-color: #E8E2D5;
+}
+
+.project-card-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 0.25rem;
+}
+
+.project-card-category {
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: var(--accent-orange);
+    font-weight: 700;
+}
+
+/* Páginas de Detalle de Proyectos */
+.project-detail-header {
+    margin-bottom: 3rem;
 }
 
 .project-tag {
-    font-size: 0.75rem;
+    font-size: 0.8rem;
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 2px;
@@ -42,82 +132,55 @@ body {
     margin-bottom: 1rem;
 }
 
-.project-title {
-    font-size: 2.5rem;
+.project-main-title {
+    font-size: 3rem;
     font-weight: 700;
-    line-height: 1.2;
-    margin-bottom: 0.75rem;
+    line-height: 1.15;
+    margin-bottom: 1rem;
     letter-spacing: -0.03em;
 }
 
 .project-meta {
-    font-size: 0.95rem;
+    font-size: 1rem;
     color: var(--text-muted);
-    margin-bottom: 2.5rem;
     font-weight: 500;
 }
 
-.project-description, .body-text {
+.project-text-block {
     font-family: var(--font-body);
-    font-size: 1.15rem;
+    font-size: 1.25rem;
     color: #333;
+    margin-bottom: 3rem;
 }
 
-.project-description p + p {
-    margin-top: 1rem;
+.project-text-block p + p {
+    margin-top: 1.25rem;
 }
 
-/* Grillas visuales y de bloques */
-.visual-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1.5rem;
-    margin-top: 2.5rem;
+.case-block {
+    margin-top: 4rem;
+    padding-top: 3rem;
+    border-top: 1px solid var(--border-subtle);
 }
 
-.visual-card {
-    background-color: var(--neutral-surface);
-    height: 320px;
-    border-radius: 12px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 0.9rem;
-    color: #666;
-    text-align: center;
-    padding: 1.5rem;
-    border: 1px dashed rgba(0, 0, 0, 0.15);
+.case-block h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    letter-spacing: -0.01em;
+}
+
+.case-block h3 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 0.75rem;
 }
 
 .grid-2 {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 2.5rem;
+    gap: 3rem;
     margin-top: 1rem;
-}
-
-.sub-column p + p {
-    margin-top: 1rem;
-}
-
-.case-block {
-    margin-top: 3.5rem;
-    padding-top: 2.5rem;
-    border-top: 1px solid var(--border-subtle);
-}
-
-.case-block h2 {
-    font-size: 1.35rem;
-    font-weight: 700;
-    margin-bottom: 1.25rem;
-    letter-spacing: -0.01em;
-}
-
-.case-block h3 {
-    font-size: 1.05rem;
-    font-weight: 600;
-    margin-bottom: 0.5rem;
-    color: #111;
 }
 
 .clean-list {
@@ -127,10 +190,10 @@ body {
 
 .clean-list li {
     position: relative;
-    padding-left: 1.25rem;
-    margin-bottom: 1rem;
+    padding-left: 1.5rem;
+    margin-bottom: 1.25rem;
     font-family: var(--font-body);
-    font-size: 1.1rem;
+    font-size: 1.15rem;
 }
 
 .clean-list li::before {
@@ -143,55 +206,47 @@ body {
 
 .pillars-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
-    gap: 1rem;
-    margin-top: 1.25rem;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.25rem;
+    margin-top: 1.5rem;
 }
 
 .pillar-item {
     background-color: var(--neutral-surface);
-    padding: 1.25rem;
-    border-radius: 8px;
-    font-size: 0.95rem;
+    padding: 1.5rem;
+    border-radius: 10px;
+    font-size: 1rem;
     font-weight: 500;
-    color: #222;
-}
-
-.experience-text {
-    margin-top: 2rem;
 }
 
 .vision-block {
     background-color: var(--neutral-surface);
-    padding: 2.5rem;
+    padding: 3rem;
     border-radius: 12px;
-    margin-top: 3.5rem;
+    margin-top: 4rem;
     border-top: none;
-}
-
-.divider {
-    height: 1px;
-    background-color: var(--border-subtle);
-    margin: 5rem 0;
 }
 
 code {
     background: rgba(0, 0, 0, 0.04);
-    padding: 0.15rem 0.35rem;
+    padding: 0.2rem 0.4rem;
     border-radius: 4px;
     font-size: 0.85em;
     font-family: monospace;
 }
 
-/* Diseño Responsive */
+/* Responsive */
 @media (max-width: 768px) {
     body {
         padding: 2rem 1rem;
     }
-    .visual-grid, .grid-2 {
+    .projects-grid, .grid-2 {
         grid-template-columns: 1fr;
     }
-    .project-title {
-        font-size: 2rem;
+    .hero-intro {
+        font-size: 1.75rem;
+    }
+    .project-main-title {
+        font-size: 2.2rem;
     }
 }
