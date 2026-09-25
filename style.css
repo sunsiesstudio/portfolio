@@ -1,8 +1,10 @@
 :root {
     --bg-main: #FAF8F5;
-    --text-main: #2C2C2C;
+    --text-main: #1A1A1A;
+    --text-muted: #555555;
     --accent-orange: #F97D50;
-    --neutral-surface: #EBE5DA;
+    --neutral-surface: #F2ECE1;
+    --border-subtle: rgba(0, 0, 0, 0.08);
     --font-sans: 'Plus Jakarta Sans', sans-serif;
     --font-body: 'Ruluko', sans-serif;
 }
@@ -17,24 +19,24 @@ body {
     background-color: var(--bg-main);
     color: var(--text-main);
     font-family: var(--font-sans);
-    line-height: 1.6;
-    padding: 4rem 1rem;
+    line-height: 1.7;
+    padding: 5rem 1.5rem;
 }
 
-.portfolio-wrapper {
-    max-width: 900px;
+.portfolio-container {
+    max-width: 860px;
     margin: 0 auto;
 }
 
 .project-section {
-    padding: 2rem 0;
+    padding: 1.5rem 0;
 }
 
 .project-tag {
-    font-size: 0.85rem;
+    font-size: 0.75rem;
     font-weight: 700;
     text-transform: uppercase;
-    letter-spacing: 1.5px;
+    letter-spacing: 2px;
     color: var(--accent-orange);
     display: inline-block;
     margin-bottom: 1rem;
@@ -43,19 +45,22 @@ body {
 .project-title {
     font-size: 2.5rem;
     font-weight: 700;
-    margin-bottom: 0.5rem;
-    letter-spacing: -0.02em;
+    line-height: 1.2;
+    margin-bottom: 0.75rem;
+    letter-spacing: -0.03em;
 }
 
-.project-subtitle {
-    font-size: 1.1rem;
-    color: #666;
-    margin-bottom: 2rem;
+.project-meta {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    margin-bottom: 2.5rem;
+    font-weight: 500;
 }
 
-.project-description, .text-block {
+.project-description, .body-text {
     font-family: var(--font-body);
-    font-size: 1.2rem;
+    font-size: 1.15rem;
+    color: #333;
 }
 
 .project-description p + p {
@@ -67,62 +72,80 @@ body {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 1.5rem;
-    margin-top: 2rem;
+    margin-top: 2.5rem;
 }
 
 .visual-card {
     background-color: var(--neutral-surface);
-    height: 300px;
+    height: 320px;
     border-radius: 12px;
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 0.9rem;
-    color: #777;
+    color: #666;
     text-align: center;
-    padding: 1rem;
+    padding: 1.5rem;
+    border: 1px dashed rgba(0, 0, 0, 0.15);
 }
 
 .grid-2 {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 2rem;
+    gap: 2.5rem;
+    margin-top: 1rem;
+}
+
+.sub-column p + p {
     margin-top: 1rem;
 }
 
 .case-block {
-    margin-top: 3rem;
-    padding-top: 2rem;
-    border-top: 1px solid rgba(0,0,0,0.08);
+    margin-top: 3.5rem;
+    padding-top: 2.5rem;
+    border-top: 1px solid var(--border-subtle);
 }
 
 .case-block h2 {
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
-    color: #111;
+    font-size: 1.35rem;
+    font-weight: 700;
+    margin-bottom: 1.25rem;
+    letter-spacing: -0.01em;
 }
 
 .case-block h3 {
-    font-size: 1.1rem;
+    font-size: 1.05rem;
+    font-weight: 600;
     margin-bottom: 0.5rem;
-    color: #333;
+    color: #111;
 }
 
-.case-block ul {
-    list-style-position: inside;
-    padding-left: 0.5rem;
+.clean-list {
+    list-style: none;
+    padding-left: 0;
 }
 
-.case-block li {
-    margin-bottom: 0.75rem;
+.clean-list li {
+    position: relative;
+    padding-left: 1.25rem;
+    margin-bottom: 1rem;
     font-family: var(--font-body);
+    font-size: 1.1rem;
+}
+
+.clean-list li::before {
+    content: "—";
+    position: absolute;
+    left: 0;
+    color: var(--accent-orange);
+    font-weight: bold;
 }
 
 .pillars-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
     gap: 1rem;
-    margin-top: 1rem;
+    margin-top: 1.25rem;
 }
 
 .pillar-item {
@@ -131,31 +154,40 @@ body {
     border-radius: 8px;
     font-size: 0.95rem;
     font-weight: 500;
+    color: #222;
+}
+
+.experience-text {
+    margin-top: 2rem;
 }
 
 .vision-block {
     background-color: var(--neutral-surface);
-    padding: 2rem;
+    padding: 2.5rem;
     border-radius: 12px;
-    margin-top: 3rem;
+    margin-top: 3.5rem;
     border-top: none;
 }
 
 .divider {
     height: 1px;
-    background-color: rgba(0,0,0,0.1);
-    margin: 4rem 0;
+    background-color: var(--border-subtle);
+    margin: 5rem 0;
 }
 
 code {
-    background: rgba(0,0,0,0.05);
-    padding: 0.2rem 0.4rem;
+    background: rgba(0, 0, 0, 0.04);
+    padding: 0.15rem 0.35rem;
     border-radius: 4px;
-    font-size: 0.9em;
+    font-size: 0.85em;
+    font-family: monospace;
 }
 
 /* Diseño Responsive */
 @media (max-width: 768px) {
+    body {
+        padding: 2rem 1rem;
+    }
     .visual-grid, .grid-2 {
         grid-template-columns: 1fr;
     }
