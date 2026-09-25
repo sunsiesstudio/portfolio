@@ -28,7 +28,7 @@ body {
     margin: 0 auto;
 }
 
-/* Navegación y Cabeceras */
+/* Navigation & Headers */
 .site-header {
     margin-bottom: 5rem;
     display: flex;
@@ -61,7 +61,7 @@ body {
     color: var(--accent-orange);
 }
 
-/* Home / Índice de Proyectos (Estilo Tilted Chair) */
+/* Home / Project Index */
 .hero-intro {
     font-size: 2.2rem;
     font-weight: 600;
@@ -81,7 +81,6 @@ body {
     text-decoration: none;
     color: inherit;
     display: block;
-    group: true;
 }
 
 .project-thumb {
@@ -117,7 +116,7 @@ body {
     font-weight: 700;
 }
 
-/* Páginas de Detalle de Proyectos */
+/* Project Detail Pages */
 .project-detail-header {
     margin-bottom: 3rem;
 }
