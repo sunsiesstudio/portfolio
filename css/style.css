@@ -67,9 +67,9 @@ h1, h2, h3 { font-weight: 400; }
 .h2 {
   font-family: var(--serif);
   font-style: italic;
-  font-size: clamp(36px, 5vw, 64px);
+  font-size: clamp(28px, 3.4vw, 40px);
   line-height: 1.2;
-  letter-spacing: -2px;
+  letter-spacing: -1px;
   color: var(--navy);
 }
 .eyebrow {
@@ -230,7 +230,7 @@ footer { padding: 32px 0 48px; font-size: 14px; color: var(--muted); text-align:
 .stat .text { margin-top: 12px; font-size: 15px; color: var(--muted); }
 
 .cs-section { padding: 110px 0 0; }
-.cs-section .h2 { color: var(--ink); text-align: left; margin-bottom: 32px; }
+.cs-section .h2 { color: var(--ink); text-align: left; margin-bottom: 20px; }
 .cs-section ul.list { list-style: none; margin: 24px 0; }
 .cs-section ul.list li { padding: 14px 0 14px 28px; border-top: 1px solid var(--line); position: relative; }
 .cs-section ul.list li:last-child { border-bottom: 1px solid var(--line); }
