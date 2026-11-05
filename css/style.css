@@ -231,6 +231,8 @@ footer { padding: 32px 0 48px; font-size: 14px; color: var(--muted); text-align:
 
 .cs-section { padding: 110px 0 0; }
 .cs-section .h2 { color: var(--ink); text-align: left; margin-bottom: 20px; }
+/* everything in a case study shares the same left edge; text keeps a readable line length */
+.cs-section .narrow { margin: 0; max-width: 760px; }
 .cs-section ul.list { list-style: none; margin: 24px 0; }
 .cs-section ul.list li { padding: 14px 0 14px 28px; border-top: 1px solid var(--line); position: relative; }
 .cs-section ul.list li:last-child { border-bottom: 1px solid var(--line); }
@@ -286,3 +288,12 @@ footer { padding: 32px 0 48px; font-size: 14px; color: var(--muted); text-align:
 .phone .frame img { border-radius: 26px; }
 .phone .caption { margin-top: 16px; }
 @media (max-width: 760px) { .phones { gap: 24px; } .phone { width: 46%; } }
+
+/* At a glance */
+.glance { margin-top: 32px; background: var(--card); border-radius: 30px; padding: 40px; text-align: left; }
+.glance-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; margin-top: 20px; }
+.g-h { font-family: var(--serif); font-style: italic; font-size: 22px; color: var(--navy); letter-spacing: -0.5px; margin-bottom: 10px; }
+.glance-grid p { font-size: 16px; color: var(--ink); }
+.skills { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }
+.skills span { padding: 4px 12px; border-radius: 99px; background: var(--bg); border: 1px solid var(--line); font-size: 14px; }
+@media (max-width: 760px) { .glance { padding: 28px 22px; } .glance-grid { grid-template-columns: 1fr; gap: 24px; } }
